@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board | FAQ</title>
+    <link rel="shortcut icon" href="./Assets/Dev-Board_logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <!-- Google Font (Poppins) CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/69c46a7e81.js" crossorigin="anonymous"></script>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <!-- TailWind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --blue: #3752FD;
+        --grey: #F4F7FF;
+        --navy: #00303C;
+      }
+    </style>
+</head>
+<body class="bg-[var(--grey)] min-h-screen p-6">
+    <header class="pop w-full max-w-[1320px] mx-auto mb-2">
+        <!-- NavBar -->
+        <nav class="flex flex-col gap-4 md:flex-row justify-between items-center w-full p-6 bg-white rounded-2xl shadow-md">
+            <div class="flex items-center gap-3">
+                <!-- Logo & Title -->
+                <div><img src="./Assets/Dev-Board_logo.svg" alt="Logo"></div>
+                <h1 class="text-2xl md:text-3xl lg:text-4xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <!-- Right Side -->
+            <button id="BackToDesk" class="bg-[var(--blue)] text-white text-sm md:text-base py-4 px-[20px] rounded-lg hover:bg-[#2337ba] transition duration-300 ease-in-out group">Back to Desk <span class="text-[var(--blue)]">-</span> <i class="group-hover:animate-ping duration-300 fa-solid fa-arrow-left"></i></button>
+        </nav>
+    </header>
+    <main>
+        <h1 class="anime text-2xl md:text-3xl lg:text-4xl font-medium md:font-semibold lg:font-bold text-center mt-8 text-[var(--navy)]">Blogs</h1>
+        <!-- FAQ List -->
+        <section class="py-8">
+            <div class="container max-w-[1320px] mx-auto px-1">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq1" class="hidden peer">
+                        <label for="faq1"
+                            class="w-full text-white text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#3752FD] hover:bg-[#2337ba] cursor-pointer flex justify-between items-center">
+                            1. What are the different ways to select an element in the DOM?
+                            <i class="fa-solid fa-chevron-down text-white"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            We offer a variety of fresh vegetables, including leafy greens, root vegetables, tomatoes,
+                            cucumbers, peppers, and more. You can find seasonal and organic options as well.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq2" class="hidden peer">
+                        <label for="faq2"
+                            class="w-full text-white text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#3752FD] hover:bg-[#2337ba] cursor-pointer flex justify-between items-center">
+                            2. What is the difference between innerHTML, innerText, and textContent?
+                            <i class="fa-solid fa-chevron-down text-white"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            Yes, we provide delivery services within a certain area. You can order your vegetables
+                            online, and we’ll have them delivered straight to your door.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq3" class="hidden peer">
+                        <label for="faq3"
+                            class="w-full text-white text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#3752FD] hover:bg-[#2337ba] cursor-pointer flex justify-between items-center">
+                            3. What is event delegation in the DOM?
+                            <i class="fa-solid fa-chevron-down text-white"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            Many of our vegetables are grown organically, and we take pride in offering healthy and
+                            pesticide-free options. Look for the "organic" label on our products.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq4" class="hidden peer">
+                        <label for="faq4"
+                            class="w-full text-white text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#3752FD] hover:bg-[#2337ba] cursor-pointer flex justify-between items-center">
+                            4. What is event bubbling in the DOM?
+                            <i class="fa-solid fa-chevron-down text-white"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            If you're not satisfied with your purchase, you can return it within 7 days for a full
+                            refund or exchange. Please keep the receipt for easy processing.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq5" class="hidden peer">
+                        <label for="faq5"
+                            class="w-full text-white text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#3752FD] hover:bg-[#2337ba] cursor-pointer flex justify-between items-center">
+                            5. How do you create, add, and remove elements using JavaScript?
+                            <i class="fa-solid fa-chevron-down text-white"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            You can place an order by visiting our website and selecting the vegetables you'd like to
+                            buy. Choose your delivery option and proceed to checkout.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./Scripts/another.js"></script>
+    <script src="./Scripts/utilities.js"></script>
+</body>
+</html>

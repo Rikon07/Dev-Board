@@ -12,3 +12,24 @@ body{
     background: linear-gradient(92deg, #3752FD 0.25%, #6C7FFA 52.64%, #9BA8F8 99.84%);
 }
 
+.anime{
+    background: linear-gradient(to right, #2337ba, #3752FD, #EFEBE3);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 3.5s linear infinite;
+}
+@keyframes animate-gradient{
+    to {
+        background-position: 200%;
+    }
+}
+@keyframes bounce-scale {
+    0%, 100% { 
+        transform: translateY(0) scale(1); 
+    }
+    50% { 
+        transform: translateY(-65px) scale(0.90); 
+    }
+}
