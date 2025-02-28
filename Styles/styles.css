@@ -1,0 +1,10 @@
+body{
+    /* background-color: red; */
+}
+.pop{
+    font-family: "Poppins", serif;
+}
+.max-w-xxl{
+    max-width: 1536px;
+    margin: 0 auto;
+}
