@@ -8,3 +8,7 @@ body{
     max-width: 1536px;
     margin: 0 auto;
 }
+.Calender{
+    background: linear-gradient(92deg, #3752FD 0.25%, #6C7FFA 52.64%, #9BA8F8 99.84%);
+}
+
