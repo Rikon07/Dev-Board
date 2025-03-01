@@ -38,10 +38,10 @@ completeButtons.forEach((button) => {
     console.log(sum);
     
     if (sum === 6) {
-      alert("COngrats! You've completed all the tasks");
+      alert("Congrats! You've completed all the tasks. 👏🏻");
     }
     sum++;
-    // Disable the button
+
     button.disabled = true;
     button.style.backgroundColor = "gray";
     button.innerHTML = 'Completed <i class="fa-solid fa-check text-xs"></i>';
@@ -50,7 +50,7 @@ completeButtons.forEach((button) => {
     const card = button.closest(".card"); 
     const cardTitle = card.querySelector(".card-title").innerText;
 
-    // Get current time in Bangladesh (UTC+6) in 12-hour format
+    // Getting current time in (UTC+6) in 12-hour format
     const now = new Date();
     const options = {
       timeZone: "Asia/Dhaka",
