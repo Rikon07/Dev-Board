@@ -11,6 +11,9 @@ body{
 .Calender{
     background: linear-gradient(92deg, #3752FD 0.25%, #6C7FFA 52.64%, #9BA8F8 99.84%);
 }
+.Calender:hover{
+    background: linear-gradient(92deg, #2337ba 0.25%, #6C7FFA 52.64%, #8792d9 99.84%);
+}
 
 .anime{
     background: linear-gradient(to right, #2337ba, #3752FD, #EFEBE3);
