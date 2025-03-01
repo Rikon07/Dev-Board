@@ -9,7 +9,7 @@ document.getElementById("colorButton").addEventListener("click", function () {
 
 // To go to the Blog page on clicking Discover section
 document.getElementById("discover").addEventListener("click", function () {
-  window.location.href = "questions.html";
+  window.location.href = "blogs.html";
 });
 
 // To show today's date
@@ -47,7 +47,7 @@ completeButtons.forEach((button) => {
     button.innerHTML = 'Completed <i class="fa-solid fa-check text-xs"></i>';
 
     // Get card title
-    const card = button.closest(".card"); // Assuming each card has a class 'card'
+    const card = button.closest(".card"); 
     const cardTitle = card.querySelector(".card-title").innerText;
 
     // Get current time in Bangladesh (UTC+6) in 12-hour format
@@ -67,11 +67,13 @@ completeButtons.forEach((button) => {
     logEntry.classList.add("bg-[var(--grey)]", "rounded-xl", "p-4");
     activityLog.appendChild(logEntry);
 
-    // Decrease task counter
+    // Decrease tasks counter
     let taskCount = parseInt(taskCounter.innerText);
     if (taskCount > 0) {
       taskCounter.innerText = taskCount - 1;
     }
+
+    // Increase nav tasks counter
     let NavTaskCount = parseInt(NavTaskCounter.innerText);
     if (NavTaskCount > 0) {
       NavTaskCounter.innerText = NavTaskCount + 1;

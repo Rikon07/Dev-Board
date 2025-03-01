@@ -35,12 +35,12 @@
                 <h1 class="text-2xl md:text-3xl lg:text-4xl">Dev<span class="font-bold">Board</span></h1>
             </div>
             <!-- Right Side -->
-            <button id="BackToDesk" class="bg-[var(--blue)] text-white text-sm md:text-base py-4 px-[20px] rounded-lg hover:bg-[#2337ba] transition duration-300 ease-in-out group">Back to Desk <span class="text-[var(--blue)]">-</span> <i class="group-hover:animate-ping duration-300 fa-solid fa-arrow-left"></i></button>
+            <button id="BackToDesk" class="bg-[var(--blue)] text-white text-sm md:text-base py-4 px-[20px] rounded-lg hover:bg-[#2337ba] transition duration-300 ease-in-out group">Back to Desk <span class="text-[var(--blue)]"><</span> <i class="group-hover:animate-ping duration-300 fa-solid fa-arrow-left"></i></button>
         </nav>
     </header>
     <main>
         <h1 class="anime text-2xl md:text-3xl lg:text-4xl font-medium md:font-semibold lg:font-bold text-center mt-8 text-[var(--navy)]">Blogs</h1>
-        <!-- FAQ List -->
+        <!-- JS FAQ List -->
         <section class="py-8">
             <div class="container max-w-[1320px] mx-auto px-1">
                 <div class="space-y-6">
@@ -53,10 +53,18 @@
                             <i class="fa-solid fa-chevron-down text-white"></i>
                         </label>
                         <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
-                            We offer a variety of fresh vegetables, including leafy greens, root vegetables, tomatoes,
-                            cucumbers, peppers, and more. You can find seasonal and organic options as well.
+                            There are several ways to select an element in DOM.
+                            <ul class="list-disc pl-6">
+                                <li>getElementById()</li>
+                                <li>getElementsByClassName()</li>
+                                <li>getElementsByTagName()</li>
+                                <li>querySelector()</li>
+                                <li>querySelectorAll()</li>
+                                <li>closest()</li>
+                            </ul>
                         </div>
                     </div>
+                    <hr class="border-t-2 border-gray-400 border-dotted my-4">
                     <!-- FAQ Item 2 -->
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <input type="checkbox" id="faq2" class="hidden peer">
@@ -66,10 +74,16 @@
                             <i class="fa-solid fa-chevron-down text-white"></i>
                         </label>
                         <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
-                            Yes, we provide delivery services within a certain area. You can order your vegetables
-                            online, and we’ll have them delivered straight to your door.
+                            The differences are:
+                            <ul class="list-disc pl-6" style="list-style-type: square;">
+                                <li>innerHTML sets HTML content, including tags.</li>
+                                <li>innerText sets only the visible text, considering CSS styles.</li>
+                                <li>textContent is raw text, unaffected by CSS styles and includes hidden text.</li>
+                            </ul>
+                            
                         </div>
                     </div>
+                    <hr class="border-t-2 border-gray-400 border-dotted my-4">
                     <!-- FAQ Item 3 -->
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <input type="checkbox" id="faq3" class="hidden peer">
@@ -79,10 +93,10 @@
                             <i class="fa-solid fa-chevron-down text-white"></i>
                         </label>
                         <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
-                            Many of our vegetables are grown organically, and we take pride in offering healthy and
-                            pesticide-free options. Look for the "organic" label on our products.
+                            Event Delegation is a JavaScript feature where instead of adding an event listener to each child element, event listener can be added only to the parent element. This technique helps to manage the events of child elements effectively, specially for dynamic uses and deleting or adding to the DOM.
                         </div>
                     </div>
+                    <hr class="border-t-2 border-gray-400 border-dotted my-4">
                     <!-- FAQ Item 4 -->
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <input type="checkbox" id="faq4" class="hidden peer">
@@ -92,10 +106,10 @@
                             <i class="fa-solid fa-chevron-down text-white"></i>
                         </label>
                         <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
-                            If you're not satisfied with your purchase, you can return it within 7 days for a full
-                            refund or exchange. Please keep the receipt for easy processing.
+                            Event bubbling refers to an event which is triggered on an element that will bubble up to its parent elements. It helps handling events effectively, especially in cases where there are lot of elements or dynamic contents.
                         </div>
                     </div>
+                    <hr class="border-t-2 border-gray-400 border-dotted my-4">
                     <!-- FAQ Item 5 -->
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <input type="checkbox" id="faq5" class="hidden peer">
@@ -105,8 +119,12 @@
                             <i class="fa-solid fa-chevron-down text-white"></i>
                         </label>
                         <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
-                            You can place an order by visiting our website and selecting the vegetables you'd like to
-                            buy. Choose your delivery option and proceed to checkout.
+                            Using JavaScript =>
+                            <ul class="list-disc pl-6">
+                                <li>Elements are created using document.createElement()</li>
+                                <li>Elements are added using append() or appendChild()</li>
+                                <li>Elements are removed using removeChild()</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
