@@ -1,11 +1,8 @@
 // Function to generate a random color
-function getRandomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
 document.getElementById("colorButton").addEventListener("click", function () {
   document.body.style.backgroundColor = getRandomColor();
 });
+
 
 // To go to the Blog page on clicking Discover section
 document.getElementById("discover").addEventListener("click", function () {
@@ -20,9 +17,9 @@ const today = new Date().toLocaleDateString("en-BD", {
   day: "numeric",
 });
 const parts = today.split(", ");
-document.getElementById(
-  "date"
-).innerHTML = `${parts[0]}<br>${parts[1]}, ${parts[2]}`;
+document.getElementById("day").innerText = parts[0];
+document.getElementById("date-part").innerText = `${parts[1]}, ${parts[2]}`;
+
 
 // Select all complete buttons
 const completeButtons = document.querySelectorAll(".complete-btn");
@@ -30,12 +27,11 @@ const taskCounter = document.getElementById("task-assigned-count");
 const NavTaskCounter = document.getElementById("nav-task-count");
 const activityLog = document.getElementById("activity-log");
 let sum = 1;
-
 for (const button of completeButtons) {
   button.addEventListener("click", function () {
     alert("Board Updated Successfully!");
     console.log(sum);
-
+    
     if (sum === 6) {
       alert("Congrats! You've completed all the tasks. 👏🏻");
     }
@@ -46,7 +42,7 @@ for (const button of completeButtons) {
     button.innerHTML = 'Completed <i class="fa-solid fa-check text-xs"></i>';
 
     // Get card title
-    const card = button.closest(".card");
+    const card = button.closest(".card"); 
     const cardTitle = card.querySelector(".card-title").innerText;
 
     // Getting current time in (UTC+6) in 12-hour format
@@ -93,6 +89,7 @@ document.getElementById("clear-history-btn").addEventListener("click", function 
     entry.remove();
   }
 
+  // History cleared text will be set back to Clear History text
   setTimeout(() => {
     this.innerHTML = 'Clear History <i class="group-hover:text-gray-400 duration-300 fa-solid fa-trash-arrow-up"></i>';
   }, 2000);
