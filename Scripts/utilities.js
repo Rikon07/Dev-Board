@@ -13,15 +13,13 @@ document.getElementById("discover").addEventListener("click", function () {
 });
 
 // To show today's date
-const today = new Date().toLocaleDateString("en-US", {
-  weekday: "long",
+const today = new Date().toLocaleDateString("en-BD", {
+  weekday: "short",
   year: "numeric",
   month: "long",
   day: "numeric",
 });
-
 const parts = today.split(", ");
-
 document.getElementById(
   "date"
 ).innerHTML = `${parts[0]}<br>${parts[1]}, ${parts[2]}`;
@@ -32,11 +30,12 @@ const taskCounter = document.getElementById("task-assigned-count");
 const NavTaskCounter = document.getElementById("nav-task-count");
 const activityLog = document.getElementById("activity-log");
 let sum = 1;
-completeButtons.forEach((button) => {
+
+for (const button of completeButtons) {
   button.addEventListener("click", function () {
     alert("Board Updated Successfully!");
     console.log(sum);
-    
+
     if (sum === 6) {
       alert("Congrats! You've completed all the tasks. 👏🏻");
     }
@@ -47,7 +46,7 @@ completeButtons.forEach((button) => {
     button.innerHTML = 'Completed <i class="fa-solid fa-check text-xs"></i>';
 
     // Get card title
-    const card = button.closest(".card"); 
+    const card = button.closest(".card");
     const cardTitle = card.querySelector(".card-title").innerText;
 
     // Getting current time in (UTC+6) in 12-hour format
@@ -59,7 +58,7 @@ completeButtons.forEach((button) => {
       second: "numeric",
       hour12: true,
     };
-    const timeString = new Intl.DateTimeFormat("en-US", options).format(now);
+    const timeString = new Intl.DateTimeFormat("en-BD", options).format(now);
 
     // Update activity log
     const logEntry = document.createElement("p");
@@ -79,15 +78,21 @@ completeButtons.forEach((button) => {
       NavTaskCounter.innerText = NavTaskCount + 1;
     }
   });
-});
+}
+
 
 // Clear activity log by clicking the Clear History button
 document.getElementById("clear-history-btn").addEventListener("click", function () {
   const activityLog = document.getElementById("activity-log");
-  const logEntries = activityLog.querySelectorAll("p"); 
+  const logEntries = activityLog.querySelectorAll("p");
 
   this.innerHTML = 'History Cleared <i class="fa-solid fa-trash-can"></i>';
-  logEntries.forEach(entry => entry.remove());
+
+  // Remove all log entries
+  for (const entry of logEntries) {
+    entry.remove();
+  }
+
   setTimeout(() => {
     this.innerHTML = 'Clear History <i class="group-hover:text-gray-400 duration-300 fa-solid fa-trash-arrow-up"></i>';
   }, 2000);
